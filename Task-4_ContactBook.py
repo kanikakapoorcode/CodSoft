@@ -21,10 +21,10 @@ class ContactBook :
         print(f"Contact {name} added successfully ! ")
         
     def view_contact_list(self) :
-        if not self.contacts :
+        if not self._contacts :
             print("No contacts in the book ! ")
         else :
-            print("Contact Liat : ")
+            print("Contact List : ")
             for i , contact in enumerate(self._contacts, start=1) :
                 print(f"{i} - {contact}")
     
@@ -122,7 +122,7 @@ def main() :
                 print("Invalid Choice. Please Choose Again .")
 
 if __name__ == "__main__" :
-    main()  
+     main()  
 
                 
         
