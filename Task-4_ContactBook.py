@@ -70,7 +70,7 @@ class ContactBook :
         print("Contact not Found.")
         
         
-    def main() :
+def main() :
         print("------------------------------------------\n")
         print("--------Welcome to the Address Book !-----")
         print("\n------------------------------------------")
