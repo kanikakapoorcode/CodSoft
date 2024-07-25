@@ -71,6 +71,7 @@ class ContactBook :
         
         
 def main() :
+    while True :
         print("------------------------------------------\n")
         print("--------Welcome to the Address Book !-----")
         print("\n------------------------------------------")
@@ -98,7 +99,7 @@ def main() :
                 contact_book.add_contact(name , phone , email , address)
             
             elif choice == '2' :
-                contact_book.view_contacts()
+                contact_book.view_contact_list()
             
             elif choice == '3' :
                 query = input("Enter Search Query :")
