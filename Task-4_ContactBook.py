@@ -28,14 +28,13 @@ class ContactBook :
             for i , contact in enumerate(self._contacts, start=1) :
                 print(f"{i} - {contact}")
     
-    def search_contact(self , query):
-            results = [contact for contact in self.contacts if query in contact.name or query in contact.phone] 
-            if not results :
-                print("No contacts found .")
-            else :
-                print("Search results : ")
-                for i , contact in enumerate(results, start=1) :
-                    print(f"{i} - {contact}")
+    def search_contact(self, query):
+        for contact in self._contacts():
+             if query in contact.name or query in contact.phone or query in contact.email or query in contact.address:
+                print(f"Name: {contact.name}")
+                print(f"Phone: {contact.phone}")
+                print(f"Email: {contact.email}")
+                print(f"Address: {contact.address}\n")
                     
     
     def update_contact(self, name):
@@ -102,7 +101,7 @@ def main() :
                 contact_book.view_contact_list()
             
             elif choice == '3' :
-                query = input("Enter Search Query :")
+                query = input("Enter search query: ")
                 contact_book.search_contact(query)
             
             elif choice == '4' :
@@ -122,8 +121,7 @@ def main() :
             else :
                 print("Invalid Choice. Please Choose Again .")
 
-if __name__ == "__main__" :
-     main()  
+if __name__ == "__main__" : main()  
 
                 
         
